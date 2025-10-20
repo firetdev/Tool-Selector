@@ -1,11 +1,18 @@
 let toolSelected = 1;  // Tool currently in use
 
+// Function to select a tool
+const selectTool = (id) => {
+    const idNum = id.replace(/^tool/, '');  // Get only the tool number
+    toolSelected = parseInt(idNum, 10);  // Convert to number
+};
+
 // Tool component
 const Tool = ({ value, id }) => {
     return (
         <div
             id={id}
             className="tool"
+            onClick={() => selectTool(id)}
             style={{
                 display: 'inline-block',
                 padding: '10px 20px',
@@ -27,6 +34,8 @@ const App = () => {
     return (
         <>
             <Tool value='1' id='tool1' />
+            <Tool value='2' id='tool2' />
+            <Tool value='3' id='tool3' />
         </>
     );
 };
