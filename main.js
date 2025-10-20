@@ -9,6 +9,8 @@ const Tool = ({ value, id, toolSelected, selectTool }) => {
             onClick={() => selectTool(id)}
             style={{
                 display: 'inline-block',
+                width: '30px',
+                height: '30px',
                 padding: '10px 10px',
                 margin: '5px',
                 border: 'none',
@@ -16,7 +18,7 @@ const Tool = ({ value, id, toolSelected, selectTool }) => {
                 cursor: 'pointer',
                 textAlign: 'center',
                 userSelect: 'none',
-                backgroundColor: toolSelected === toolNumber ? '#cacacaff' : '#ffffffff',  // Highlight if selected
+                backgroundColor: toolSelected === toolNumber ? '#dededeff' : '#ffffffff',  // Highlight if selected
             }}
         >
             {value}
