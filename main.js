@@ -5,9 +5,9 @@ const Tool = ({ value, id, toolSelected, selectTool }) => {
 
     let backgroundColor = '#ffffffff';
     if (toolSelected === toolNumber) 
-        backgroundColor = '#dededeff';  // Selected color
+        backgroundColor = '#e1e1e1ff';  // Selected color
     if (isHovered)
-        backgroundColor = '#e0e0e0ff';  // Hover color
+        backgroundColor = '#f4f4f4ff';  // Hover color
 
     return (
         <div
@@ -27,7 +27,7 @@ const Tool = ({ value, id, toolSelected, selectTool }) => {
                 cursor: 'pointer',
                 textAlign: 'center',
                 userSelect: 'none',
-                backgroundColor: {backgroundColor},
+                backgroundColor: backgroundColor,
             }}
         >
             {value}
