@@ -17,10 +17,12 @@ const Tool = ({ value, id, toolSelected, selectTool }) => {
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => selectTool(id)}
             style={{
-                display: 'inline-block',
+                display: 'inline-flex',
+                justifyContent: 'center',
+                alignItems: 'center',
                 width: '30px',
                 height: '30px',
-                padding: '10px 10px',
+                padding: '10px',
                 margin: '5px',
                 border: 'none',
                 borderRadius: '4px',
