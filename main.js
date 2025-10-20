@@ -1,11 +1,20 @@
 // Tool component
 const Tool = ({ value, id, toolSelected, selectTool }) => {
     const toolNumber = parseInt(id.replace(/^tool/, ''), 10);  // Extract tool number from id
+    const [isHovered, setIsHovered] = React.useState(false);  // State to track hover
+
+    let backgroundColor = '#ffffffff';
+    if (toolSelected === toolNumber) 
+        backgroundColor = '#dededeff';  // Selected color
+    if (isHovered)
+        backgroundColor = '#e0e0e0ff';  // Hover color
 
     return (
         <div
             id={id}
             className="tool"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
             onClick={() => selectTool(id)}
             style={{
                 display: 'inline-block',
@@ -18,7 +27,7 @@ const Tool = ({ value, id, toolSelected, selectTool }) => {
                 cursor: 'pointer',
                 textAlign: 'center',
                 userSelect: 'none',
-                backgroundColor: toolSelected === toolNumber ? '#dededeff' : '#ffffffff',  // Highlight if selected
+                backgroundColor: {backgroundColor},
             }}
         >
             {value}
