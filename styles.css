@@ -1,3 +1,16 @@
 body {
     font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#toolbar {
+    margin-top: 20%;
+    background-color: rgb(243, 243, 239);
+    border-radius: 9px;
+    padding: 3px;
+    width: fit-content;
 }

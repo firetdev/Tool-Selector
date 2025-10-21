@@ -5,7 +5,7 @@ const Tool = ({ value, id, toolSelected, selectTool }) => {
 
     let backgroundColor = '#ffffffff';
     if (toolSelected === toolNumber) 
-        backgroundColor = '#e1e1e1ff';  // Selected color
+        backgroundColor = '#e2e2e2ff';  // Selected color
     if (isHovered)
         backgroundColor = '#f4f4f4ff';  // Hover color
 
@@ -20,12 +20,12 @@ const Tool = ({ value, id, toolSelected, selectTool }) => {
                 display: 'inline-flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                width: '30px',
-                height: '30px',
-                padding: '10px',
-                margin: '5px',
+                width: '24px',
+                height: '24px',
+                padding: '8px',
+                margin: '3px',
                 border: 'none',
-                borderRadius: '4px',
+                borderRadius: '7px',
                 cursor: 'pointer',
                 textAlign: 'center',
                 userSelect: 'none',
